@@ -8,7 +8,7 @@ To run q1 :
 
 bash ./q1.sh filePath
 
-
+<br/><br/>
 
 Question 2 : Write a bash script that takes a directory path as input and prints list of all files that the current user has permission to execute, and member of other group does not have permission to read.
 
