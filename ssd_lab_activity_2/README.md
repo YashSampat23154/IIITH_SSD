@@ -8,6 +8,7 @@ For Activity 1 :
 
 To execute : bash ./q1.sh <filename>
 
+<br/><br/>
 
 Question 2 : Write a bash script (q2.sh) to print names of all the shell that belongs to ‘ /usr ’.
   
