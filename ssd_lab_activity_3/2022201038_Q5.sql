@@ -1,0 +1,4 @@
+SELECT D.Mgr_ssn , D.Dnumber, COUNT(*) AS Number_of_Dependents
+FROM DEPENDENT, (SELECT DISTINCT Mgr_ssn, Dnumber FROM DEPARTMENT WHERE Dnumber IN(SELECT DISTINCT Dnumber FROM DEPT_LOCATIONS GROUP BY Dnumber HAVING COUNT(Dnumber) > 2)) AS D
+WHERE Essn = D.Mgr_ssn
+GROUP BY D.Dnumber;
