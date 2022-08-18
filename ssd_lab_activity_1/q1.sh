@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep -i "^a" $1 | grep -i "[^t][^x][^t]$"
+grep -Eo "\w+" $1 | grep --colour -Ei "^a" | grep --colour -Eiv "txt$"
