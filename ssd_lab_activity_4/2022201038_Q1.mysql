@@ -1,0 +1,11 @@
+DELIMITER /  
+
+CREATE PROCEDURE AddSum (num1 INT, num2 INT)
+BEGIN
+SELECT num1, num2, num1+num2 AS Result;
+END /
+
+DELIMITER ;
+
+
+CALL AddSum (20, 30);
