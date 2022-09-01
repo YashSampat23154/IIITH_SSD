@@ -1,0 +1,12 @@
+DELIMITER /  
+
+CREATE PROCEDURE findNames (city varchar(100))
+BEGIN
+
+SELECT CUST_NAME FROM customer WHERE WORKING_AREA = city;
+
+END /
+
+DELIMITER ;
+
+CALL findNames('Bangalore');

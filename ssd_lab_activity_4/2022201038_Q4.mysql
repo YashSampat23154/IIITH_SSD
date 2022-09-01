@@ -1,0 +1,39 @@
+DELIMITER /
+
+CREATE PROCEDURE getDetails()
+BEGIN
+DECLARE done INT DEFAULT 0;
+DECLARE name VARCHAR(100);
+DECLARE city VARCHAR(100);
+DECLARE country VARCHAR(100);
+DECLARE grade VARCHAR(100);
+
+DECLARE exp_cur CURSOR FOR
+
+SELECT CUST_NAME, CUST_CITY, CUST_COUNTRY, GRADE
+FROM customer
+WHERE
+AGENT_CODE like "A00%";
+
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+OPEN exp_cur;
+
+label:LOOP
+
+FETCH exp_cur INTO name, city, country, grade;
+
+IF done = 1 THEN LEAVE label;
+END IF;
+
+SELECT name, city, country, grade;
+
+END LOOP label;
+
+CLOSE exp_cur;
+
+END /
+
+DELIMITER ;
+
+CALL getDetails();
