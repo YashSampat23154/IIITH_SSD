@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        Studnent Records Page
+    </title>
+    
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
+
+</head>
+
+  <body>
+
+    <div>
+        <h1 class="heading">Student Records</h1>
+
+        <div class="center">
+
+            <input id="rollnoData" type="text" placeholder="Roll No.">    
+            <input id="nameData" type="text" placeholder="Student Name">
+            <input id="addNewButton" type="submit" value="Add New" onclick="addData()">
+
+            <div class="extraPadding"></div>
+
+            <div id="tableContainer">
+            
+                <table id="dataTable">
+                    <th>Roll No</th> <th>Name</th>
+                    
+                </table>
+
+            </div>
+
+            <div class="extraPadding"></div>
+
+
+            <div id="dataEntryDeleteContainer"></div>
+                    <input onclick="deleteData()" id="deleteButton" type="submit" value="Delete Last Entry">
+            </div>
+    
+
+        </div>
+    
+    </div>
+
+  </body>
+
+</html>
