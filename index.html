@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>SSD LAB 6</title>
+        <script src="myscript.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+            <h1>Team Form</h1>
+            </br></br></br></br></br></br>
+
+            <form class="contianer" name="form1">
+
+                <span><b>Manager Name</b></span>
+                <input type="text" name="ManagerName" required>
+                </br></br></br>
+
+                <span><b>Group Email</b></span>
+                <input type="text" name="GroupEmail" required onchange="ValidateEmail(document.form1.GroupEmail)">
+                </br></br></br>
+
+                <span><b>Server Username</b></span>
+                <input type="text" name="ServerUsername" required oninput="ValidateUsername(document.form1.ServerUsername)">
+                <span><b id="InvalidCheck"></b></span>
+                </br></br></br>
+
+                <span><b>Server Password</b></span>
+                <input type="password" name="ServerPassword" required>
+                </br></br></br>
+
+                <span><b>Confirm Password</b></span>
+                <input type="password" name="ConfirmPassword" required onchange="ValidatePassword(document.form1.ServerPassword, document.form1.ConfirmPassword)">
+                </br></br></br>
+
+                <span><b>Team Lead</b></span>               
+                <select id="Team Lead" name="TeamLead" requied onchange="ValidateTeamLead(document.form1.TeamLead)">
+                    <option value="tempLead">Select a Lead</option>
+                    <option value="Yash">Yash</option>
+                    <option value="Pranav">Pranav</option>
+                    <option value="Riddhi">Riddhi</option>
+                    <option value="Mohit">Mohit</option>
+                </select>
+                </br></br></br>
+
+                <span><b>Team Members</b></span>
+                <div class="Team Members">
+                    
+                    <div name="group1" class="group1">
+                        <p>James</p>
+                        <p>Jack</p>
+                        <p>Jill</p>
+                    </div>
+
+                    <br><br><br>
+
+                    <span class="clear"></span>
+
+                    <div name="group2" class="group2">
+
+                    </div>
+
+                    <br><br><br>
+
+                </div>
+                </br></br></br>
+
+                <button onclick="checkAll()">SUBMIT</button>
+
+            </form>
+    </body>
+</html>
