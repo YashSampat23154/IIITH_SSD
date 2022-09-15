@@ -1,0 +1,50 @@
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+b{
+    margin-right: 30px;
+}
+
+  
+input{
+    margin-right: 10px;
+    padding-right: 30px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.group1{
+    left: 50%;
+    right: 50%;
+    display: inline-block;
+    width: 100px;
+    height: 200px;
+    border: 2px black solid;
+    margin: 10px;
+    padding: 30px;
+}
+
+
+.clear{
+    box-sizing: border-box;
+}
+
+.group2{
+    left: 50%;
+    right: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 200px;
+    border: 2px black solid;
+    margin: 10px;
+    padding: 30px;
+}
